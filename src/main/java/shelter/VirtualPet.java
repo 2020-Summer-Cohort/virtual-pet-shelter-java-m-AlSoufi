@@ -7,10 +7,12 @@ public class VirtualPet {
     private int thirst;
     private int boredom;
 
+
     public VirtualPet(String name, String desc) {
         this.name = name;
         this.desc = desc;
     }
+
 
     public VirtualPet(String name, String desc, int hunger, int thirst, int boredom) {
         this.name = name;
@@ -18,6 +20,7 @@ public class VirtualPet {
         this.hunger = hunger;
         this.thirst = thirst;
         this.boredom = boredom;
+
     }
 
     public String getName() {
@@ -40,6 +43,8 @@ public class VirtualPet {
         return boredom;
     }
 
+
+
     public void feeding() {
         System.out.println(hunger -= 35);
 
@@ -55,9 +60,8 @@ public class VirtualPet {
 
     }
 
-    public void takeToDoctor() {
-        System.out.println(sickness -= 25);
-
+    public void playWithPet(){
+        boredom -= 10;
     }
 
     public void tick() {
