@@ -31,16 +31,17 @@ public class VirtualPetShelter {
         }
     }
 
-    public void playWithAPet() {
-        for (VirtualPet petToPlayWith : petMap.values()) {
-            petToPlayWith.playing();
-        }
-    }
-    public void tickAll(){
+    public void playWithAPet(String name){
+       VirtualPet pet = petMap.get(name);
+       pet.playing();
+            }
+
+    public static void tickAll(){
 
         for(VirtualPet petToTick: petMap.values() ){
             petToTick.tick();
         }
     }
+
 }
 
