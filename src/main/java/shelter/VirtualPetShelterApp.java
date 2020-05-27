@@ -2,7 +2,12 @@ package shelter;
 
 import java.util.Scanner;
 /*
- * Moe as you con
+ * Moe as you continue to work on this application class to meet teh requirements of the project,
+ * consider using the shelter object as your main way of interacting with your pets.  You do need to
+ * create pet objects like you do in lines 13-16 and then add them to the shelter like in lines 19-22.  But after that
+ * use the methods in the shelter to return either all the pets in the shelter, or a specific pet in the shelter.
+ * Doing so will allow your app to be more dynamic and provide you with up to date lists of pets that are in
+ * the shelter no matter which way the user of the app takes the interactions.
  */
 
 public class VirtualPetShelterApp {
