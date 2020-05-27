@@ -4,6 +4,16 @@ package shelter;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * Adding a couple methods to meet requirements is the only change to this class I see you need.
+ * - retrieveAllPets() -> retrieving all the pets in the shelter, think `return petMap.values()` for the
+ *   method body.
+ * - retrieveSinglePet(String petName) - retrieving a single pet from the shelter, think
+ *   `return petMap.get(petName)` for the method body.
+ *
+ * This class looks great other than those two missing required methods.
+ *
+ */
 public class VirtualPetShelter {
 
     Map<String, VirtualPet> petMap = new HashMap<String, VirtualPet>();

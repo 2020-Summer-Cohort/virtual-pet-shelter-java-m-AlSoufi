@@ -1,6 +1,9 @@
 package shelter;
 
 import java.util.Scanner;
+/*
+ * Moe as you con
+ */
 
 public class VirtualPetShelterApp {
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package shelter;
-
+/*
+ * See comments in the first constructor, it's the only comment I have on this otherwise good looking class!
+ */
 public class VirtualPet {
     private String name;
     private String desc;
@@ -11,6 +13,16 @@ public class VirtualPet {
     public VirtualPet(String name, String desc) {
         this.name = name;
         this.desc = desc;
+        /*
+         * If you want to add default values for your hunger, thirst and boredom instance variables, here would
+         * be a good place to do so.  For example:
+         * hunger = 30;
+         * thirst = 30
+         * boredom = 30
+         *
+         * Java by default will initialize a primitive int instance variable to 0, but it's best to give it an
+         * explicit value to prevent confusion as to what you intended that value to be.
+         */
     }
 
 
