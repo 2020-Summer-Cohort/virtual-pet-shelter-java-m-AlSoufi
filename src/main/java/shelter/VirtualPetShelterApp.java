@@ -35,11 +35,13 @@ public class VirtualPetShelterApp {
             System.out.println("3. Play with a pet");
             System.out.println("4. Adopt a pet");
             System.out.println("5. Admit a pet");
+
             System.out.println("6. Quit");
 
 
             Scanner scanner = new Scanner(System.in);
             int userChoice = scanner.nextInt();
+            scanner.nextLine();
             if (userChoice == 1) {
                 shelter.feedAllPets();
                 System.out.println("You just fed all the pets!");
@@ -50,24 +52,25 @@ public class VirtualPetShelterApp {
                 System.out.println("Which pet would you like to play with?");
                 String selection = scanner.nextLine();
                 shelter.playWithAPet(selection);
+                System.out.println("You just played with " + selection);
             } else if (userChoice == 4) {
-                VirtualPetShelter.adoptPet();
-                System.out.println("Please enter pet name");
+                System.out.println("Please enter the name of the pet you would like to adopt");
+                String selection = scanner.nextLine();
+                shelter.adoptPet(shelter.findPet(selection));
+
+
+            } else if (userChoice == 5) {
+                System.out.println("Please enter the name of the pet you are admitting ");
                 String selection = scanner.nextLine();
                 System.out.println("Please enter pet description");
-            }
-            else if(userChoice == 5){
-                VirtualPetShelter.addPet();
-                System.out.println("Please enter pet name");
-                String selection = scanner.nextLine();
-                System.out.println("Please enter pet description");
-            }
-            else if (userChoice == 6) {
+                String petadmitdesc = scanner.nextLine();
+                shelter.addPet(new VirtualPet(selection, petadmitdesc));
+            } else if (userChoice == 6) {
                 System.out.println("Thank you for volunteering at The Neighborhood Virtual Pet Shelter!");
                 break;
             }
 
-            VirtualPetShelter.tickAll;
+            shelter.tickAll();
         }
     }
 }
