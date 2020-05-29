@@ -36,7 +36,8 @@ public class VirtualPetShelterApp {
             System.out.println("4. Adopt a pet");
             System.out.println("5. Admit a pet");
             System.out.println("6. List all pets");
-            System.out.println("7. Quit");
+            System.out.println("7. Locate a pet");
+            System.out.println("8. Quit");
 
 
             Scanner scanner = new Scanner(System.in);
@@ -64,13 +65,12 @@ public class VirtualPetShelterApp {
                 String selection = scanner.nextLine();
                 System.out.println("Please enter pet description");
                 String petadmitdesc = scanner.nextLine();
-                shelter.addPet(new VirtualPet(selection, petadmitdesc));}
-              else if (userChoice == 6){
+                shelter.addPet(new VirtualPet(selection, petadmitdesc));
+            } else if (userChoice == 6) {
                 System.out.println("The list of the pets we have is: \n " + shelter.petMap.keySet());
-
-            }
-
-              else if (userChoice == 7) {
+            } else if (userChoice == 7) {
+            shelter.locatePet();
+            } else if (userChoice == 8) {
                 System.out.println("Thank you for volunteering at The Neighborhood Virtual Pet Shelter!");
                 break;
             }
