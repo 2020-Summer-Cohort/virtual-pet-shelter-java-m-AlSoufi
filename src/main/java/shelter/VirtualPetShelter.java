@@ -8,8 +8,9 @@ public class VirtualPetShelter {
 
     Map<String, VirtualPet> petMap = new HashMap<String, VirtualPet>();
 
-    public VirtualPetShelter() {
-        petMap = new HashMap<String, VirtualPet>();
+    public void petMap() {
+       String name;
+       String desc;
     }
 
 
