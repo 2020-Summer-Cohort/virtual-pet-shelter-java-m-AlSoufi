@@ -66,7 +66,7 @@ public class VirtualPetShelterApp {
                 String petadmitdesc = scanner.nextLine();
                 shelter.addPet(new VirtualPet(selection, petadmitdesc));}
               else if (userChoice == 6){
-                System.out.println("The list of the pets we have is: \n " + shelter.petMap);
+                System.out.println("The list of the pets we have is: \n " + shelter.petMap.keySet());
 
             }
 

@@ -1,6 +1,7 @@
 package shelter;
 
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,11 +10,17 @@ public class VirtualPetShelter {
     Map<String, VirtualPet> petMap = new HashMap<String, VirtualPet>();
 
     public void petMap() {
-       String name;
-       String desc;
+        String name;
+        String desc;
     }
 
-
+    public Collection<VirtualPet> retrieveAllPets() {
+        Collection<VirtualPet> values = petMap.values();
+        return values;
+    }
+    public void retrieveSinglePet(String petName){
+        petMap.get(petName);
+    }
     public void addPet(VirtualPet pet) {
 
         petMap.put(pet.getName(), pet);
